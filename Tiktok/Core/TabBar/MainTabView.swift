@@ -38,7 +38,7 @@ struct MainTabView: View {
                     }
                 }
             
-            Text("Notification")
+            NotificationsView()
                 .tabItem {
                     VStack {
                         Image(systemName: "heart")
