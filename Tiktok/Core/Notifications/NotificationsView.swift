@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct NotificationsView: View {
-    var body: some View {
-        NavigationStack {
-            ScrollView {
-                LazyVStack(spacing: 12) {
-                    ForEach(0 ..< 10) { notification in
-                        NotificationCell()
-                            .padding(.top)
-                    }
-                }
-            }
-            .navigationTitle("Notifications")
-            .navigationBarTitleDisplayMode(.inline)
-            .padding(.top)
+  var body: some View {
+    NavigationStack {
+      ScrollView {
+        LazyVStack(spacing: 12) {
+          ForEach(0..<10) { notification in
+            NotificationCell()
+              .padding(.top)
+          }
         }
+      }
+      .navigationTitle("Notifications")
+      .navigationBarTitleDisplayMode(.inline)
+      .padding(.top)
     }
+  }
 }
 
 #Preview {
-    NotificationsView()
+  NotificationsView()
 }
