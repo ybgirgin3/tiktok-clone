@@ -5,19 +5,19 @@
 //  Created by Yusuf Berkay Girgin on 31.07.2024.
 //
 
+import AVKit
 import SwiftUI
 
 struct FeedCell: View {
-  let post: Int
-
+  let post: Post
+  @State var player = AVPlayer()
   var body: some View {
     ZStack {
-      Rectangle()
-        .fill(.pink)
+
+        VideoPlayer(player: AVPlayer(url: URL(string: post.videoUrl)!))
+        .edgesIgnoringSafeArea(.all)
         .containerRelativeFrame([.horizontal, .vertical])
-        .overlay {
-          Text("post \(post)")
-        }
+
       VStack {
         Spacer()
 
@@ -96,5 +96,9 @@ struct FeedCell: View {
 }
 
 #Preview {
-  FeedCell(post: 2)
+  FeedCell(
+    post: Post(
+      id: NSUUID().uuidString,
+      videoUrl:
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"))
 }

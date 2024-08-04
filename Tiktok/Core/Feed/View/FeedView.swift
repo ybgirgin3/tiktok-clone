@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct FeedView: View {
+  @StateObject var viewModel = FeedViewModel()
   var body: some View {
     ScrollView {
       LazyVStack(spacing: 0) {
-        ForEach(0..<10) { post in
+        ForEach(viewModel.posts) { post in
+            let _ = print("url in feed view \(post)")
           FeedCell(post: post)
         }
       }.scrollTargetLayout()
