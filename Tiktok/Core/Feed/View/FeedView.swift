@@ -13,7 +13,7 @@ struct FeedView: View {
     ScrollView {
       LazyVStack(spacing: 0) {
         ForEach(viewModel.posts) { post in
-            let _ = print("url in feed view \(post)")
+//            let _ = print("url in feed view \(post)")
           FeedCell(post: post)
         }
       }.scrollTargetLayout()
