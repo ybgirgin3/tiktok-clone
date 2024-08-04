@@ -10,11 +10,16 @@ import SwiftUI
 
 struct FeedCell: View {
   let post: Post
-  @State var player = AVPlayer()
+  var player: AVPlayer
+
+  init(post: Post) {
+    self.post = post
+    self.player = AVPlayer(url: URL(string: post.videoUrl)!)
+  }
+
   var body: some View {
     ZStack {
-
-        VideoPlayer(player: AVPlayer(url: URL(string: post.videoUrl)!))
+      CustomVideoPlayer(player: player)
         .edgesIgnoringSafeArea(.all)
         .containerRelativeFrame([.horizontal, .vertical])
 
@@ -91,6 +96,12 @@ struct FeedCell: View {
 
       }.padding()
 
+    }.onAppear {
+      //        player.play()
+      print("post \(post)")
+    }
+    .onDisappear {
+      player.pause()
     }
   }
 }

@@ -9,16 +9,23 @@ import SwiftUI
 
 struct FeedView: View {
   @StateObject var viewModel = FeedViewModel()
+    @State private var scrollPosition: String?
+    
   var body: some View {
     ScrollView {
       LazyVStack(spacing: 0) {
         ForEach(viewModel.posts) { post in
-//            let _ = print("url in feed view \(post)")
           FeedCell(post: post)
+                .id(post.id)
         }
       }.scrollTargetLayout()
-    }.scrollTargetBehavior(.paging)
+    }
+    .scrollPosition(id: $scrollPosition)
+    .scrollTargetBehavior(.paging)
       .ignoresSafeArea()
+      .onChange(of: scrollPosition, { oldValue, newValue in
+          print("DEBUG: $scrollPosition is \(newValue)")
+      })
   }
 }
 

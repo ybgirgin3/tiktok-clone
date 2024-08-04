@@ -19,6 +19,7 @@
 		049B1C212C5AE683002BA5FA /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049B1C202C5AE683002BA5FA /* PostGridView.swift */; };
 		04CBBE3A2C5FAB17008FD705 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBBE392C5FAB17008FD705 /* Post.swift */; };
 		04CBBE402C5FACE4008FD705 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBBE3F2C5FACE4008FD705 /* FeedViewModel.swift */; };
+		04CBBE422C5FC505008FD705 /* CustomVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBBE412C5FC505008FD705 /* CustomVideoPlayer.swift */; };
 		04F99DB22C56E1B1005F6CBD /* TiktokApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F99DB12C56E1B1005F6CBD /* TiktokApp.swift */; };
 		04F99DB42C56E1B1005F6CBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F99DB32C56E1B1005F6CBD /* ContentView.swift */; };
 		04F99DB62C56E1B2005F6CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F99DB52C56E1B2005F6CBD /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		049B1C202C5AE683002BA5FA /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		04CBBE392C5FAB17008FD705 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		04CBBE3F2C5FACE4008FD705 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		04CBBE412C5FC505008FD705 /* CustomVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayer.swift; sourceTree = "<group>"; };
 		04F99DAE2C56E1B1005F6CBD /* Tiktok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiktok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F99DB12C56E1B1005F6CBD /* TiktokApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiktokApp.swift; sourceTree = "<group>"; };
 		04F99DB32C56E1B1005F6CBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 		04F99DEB2C56E9EC005F6CBD /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				04CBBE412C5FC505008FD705 /* CustomVideoPlayer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				049B1C1D2C5AE5F8002BA5FA /* CurrentUserProfileView.swift in Sources */,
+				04CBBE422C5FC505008FD705 /* CustomVideoPlayer.swift in Sources */,
 				049B1C0F2C5AD8BE002BA5FA /* FeedView.swift in Sources */,
 				049B1C192C5AE312002BA5FA /* NotificationCell.swift in Sources */,
 				0486771D2C5AE9270057CDF5 /* UserStatView.swift in Sources */,
@@ -642,6 +646,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tiktok/Preview Content\"";
+				DEVELOPMENT_TEAM = 2Q8Q72DDF4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -670,6 +675,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tiktok/Preview Content\"";
+				DEVELOPMENT_TEAM = 2Q8Q72DDF4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
